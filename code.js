@@ -2,12 +2,13 @@
 
 var rows = 100;
 var cols = 50;
-var dcols = 10;
 var playing = true;
 var grid = new Array(rows);
 var nextGrid = new Array(rows);
 var timer;
 var reproductionTime = 100;
+var widwin = window.screen.width;
+var dcols = Math.round(widwin/100);
 
 function initializeGrids() {
     for (var i = 0; i < rows; i++) {
