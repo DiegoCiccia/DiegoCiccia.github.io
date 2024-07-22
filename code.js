@@ -1,14 +1,14 @@
 // Based on Conway's Game of Life - JavaScript by Robert Spatz
 
-var rows = 100;
-var cols = 50;
+var widh = window.screen.height;
+var rows =  Math.round(widh/10);
+var widwin = window.screen.width;
+var cols = Math.round(widwin/10);
 var playing = true;
 var grid = new Array(rows);
 var nextGrid = new Array(rows);
 var timer;
 var reproductionTime = 100;
-var widwin = window.screen.width;
-var dcols = Math.round(widwin/100);
 
 function initializeGrids() {
     for (var i = 0; i < rows; i++) {
@@ -55,7 +55,7 @@ function createTable() {
     
     for (var i = 0; i < rows; i++) {
         var tr = document.createElement("tr");
-        for (var j = 0; j < dcols; j++) {//
+        for (var j = 0; j < cols; j++) {//
             var cell = document.createElement("td");
             cell.setAttribute("id", i + "_" + j);
             cell.setAttribute("class", "dead");
@@ -85,7 +85,7 @@ function createTable() {
 
     function updateView() {
         for (var i = 0; i < rows; i++) {
-            for (var j = 0; j < dcols; j++) {
+            for (var j = 0; j < cols; j++) {
                 var cell = document.getElementById(i + "_" + j);
                 if (grid[i][j] == 0) {
                     cell.setAttribute("class", "dead");
@@ -101,7 +101,7 @@ function randomButtonHandler() {
     //if (playing) return;
     //clearButtonHandler();
     for (var i = 0; i < rows; i++) {
-        for (var j = 0; j < dcols; j++) {
+        for (var j = 0; j < cols; j++) {
             var isLive = Math.round(Math.random() + 0.1);
             if (isLive == 1) {
                 var cell = document.getElementById(i + "_" + j);
