@@ -53,6 +53,7 @@
 
 #fcontainer {
     position: relative;
+    margin: 0 auto;
 }
 
 #endbox {
