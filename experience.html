@@ -1,74 +1,138 @@
+<!DOCTYPE html>
 <html>
     <head>
-    <meta charset = "UTF-8" />
-    <title>Diego Ciccia</title>
-    <link rel="stylesheet" href="life.css"> 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="website.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+        <meta charset="UTF-8" />
+        <title>Diego Ciccia</title>
+        <link rel="stylesheet" href="life.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="website.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+        
+        <style>
+            /* Custom utility style to guarantee perfect alignment and matching borders */
+            .custom-box {
+                background-color: #ffffff; 
+                border: 3px solid #000000; 
+                padding: 20px; 
+                margin-bottom: 20px;
+                height: 100%; /* Ensures boxes look uniform */
+            }
+            .img-border {
+                border: 3px solid #000000;
+                margin-bottom: 20px;
+            }
+        </style>
     </head>
 
     <body>
-    <nav class="navbar navbar-inverse">
-        <div class="container">
-            <ul class="nav navbar-nav">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <ul class="nav navbar-nav">
                 <li><a href="index.html">Home</a></li>
-                <li><a style="color:#e01709" href="/">Experience</a></li>
+                <li><a style="color:#e01709" href="/">CV</a></li>
                 <li><a href="publications.html">Software</a></li> 
-            </ul>
-        </div>
-    </nav>
-
-    <div id = "fcontainer" style = "margin: 0 auto;">
-
-    <div id ="conway">
-    </div>
-
-    <div class="container">
-            <div class="col-md-8 center" style ="background-color: #ffffff;border-style: solid;opacity: 0.95;">
-                <div>
-                    <a style="color:#000000"><b>RA</b></a>
-                    <ul>
-                        <li>Sciences Po, Clément de Chaisemartin (Nov 2023 - Aug 2024)</li>
-                        <li>Northwestern-Kellogg and HEC Montréal, Nicola Persico and Decio Coviello (Feb 2022 - Jun 2024)</li>
-                        <li>Fondo Repubblica Digitale, Evaluation Lab (Nov 2022 - Oct 2023)</li>                        
-                    </ul>
-                </div>
-                <div>
-                    <a style="color:#000000"><b>TA</b></a>
-                    <ul>
-                        <li>Senior TA, Financial Mathematics, University of Catania (Nov 2022 - Feb 2023)</li>
-                        <li>Junior TA, General Mathematics, UNiversity of Catania (Feb 2021 - Sep 2022)</li>
-                    </ul>
-                </div>
-                <div>
-                    <a style="color:#000000"><b>Awards</b></a>
-                    <ul>
-                        <li>4th "Fabrizio Saccomanni" Scholarship, Unicredit Foundation</li>
-                    </ul>
-                </div>
-                <div>
-                    <a style="color:#000000"><b>Education</b></a>
-                    <ul>
-                        <li>Northwestern-Kellogg, Ph.D. in Managerial Economics and Strategy, (Sep 2024 - )</li>
-                        <li>University of Catania, M.Sc. in Corporate Finance, 110L/110 (Sep 2020 - Jul 2022)</li>
-                        <li>University of Catania, B.Sc. in Business Administration, 110L/110 (Sep 2017 - Jul 2020)</li>
-                    </ul>
-                </div>
-                <div>
-                    <a style="color:#000000"><b>Further info</b></a>
-                    <ul>
-                        <li>Taken course in General Topology, Department of Mathematics (U. of Catania), 30/30</li>
-                        <li>Programming and scripting languages that I currently use: <br> &emsp; Stata, R, LaTeX, MATLAB, Vim, Git, C++, JS, Mathematica</li>
-                        <li>Former president and author of Starting Finance Club, University of Catania</li>
-                    </ul>
-                </div>
+                <li><a href="conway.html">Game of Life</a></li> 
+                </ul>
             </div>
-    </div>
-    </div>
-    <script src="code.js"></script>
+        </nav>
+
+        <div id="fcontainer">
+            <div id="conway"></div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="custom-box" style="margin-bottom: 20px;">
+                        <div class="paper-container">
+                            <details>
+                                <summary style="cursor: pointer; font-size: 16px; margin-bottom: 0px;">
+                                    <span style="font-size: 16px; color: #0066cc;">&#x1F393;</span>
+                                    <span class="paper-title" style="color: #1a0dab; font-weight: bold;">Education   
+                                    </span> 
+                                    </span> 
+                                        <ul>
+                                            <li>Northwestern-Kellogg, Ph.D. in Managerial Economics and Strategy, (Sep 2024 - )</li>
+                                            <li>Northwestern-Kellogg, M.Sc. in Managerial Economics and Strategy, (Sep 2024 - Jun 2025, 1st year Ph.D. sequence)</li>
+                                            <li>University of Catania, M.Sc. in Corporate Finance, 110L/110 (Sep 2020 - Jul 2022)</li>
+                                            <li>University of Catania, B.Sc. in Business Administration, 110L/110 (Sep 2017 - Jul 2020)</li>
+                                        </ul>
+                                </summary>
+                            </details>
+                        </div>
+                        </div>
+                    <div class="custom-box" style="margin-bottom: 20px;">
+                        <div class="paper-container">
+                            <details>
+                                <summary style="cursor: pointer; font-size: 16px; margin-bottom: 0px;">
+                                    <span style="font-size: 16px; color: #0066cc;">&#x1F3C6;</span>
+                                    <span class="paper-title" style="color: #1a0dab; font-weight: bold;">Awards    
+                                    </span> 
+                                    </span> 
+                                    <ul>
+                                        <li>4th "Fabrizio Saccomanni" Scholarship, Unicredit Foundation</li>
+                                    </ul>
+                                </summary>
+                            </details>
+                        </div>
+                        </div>
+                    <div class="custom-box" style="margin-bottom: 20px;">
+                        <div class="paper-container">
+                            <details>
+                                <summary style="cursor: pointer; font-size: 16px; margin-bottom: 0px;">
+                                    <span style="font-size: 16px; color: #0066cc;">&#x1F4BC;</span>
+                                    <span class="paper-title" style="color: #1a0dab; font-weight: bold;">Research Assistance    
+                                    </span> 
+                                    </span> 
+                                    <ul>
+                                        <li>Northwestern-Kellogg, Benjamin Friedrich, (Jan 2026 - Mar 2026)</li>
+                                        <li>Sciences Po, Clément de Chaisemartin (Nov 2023 - Aug 2024)</li>
+                                        <li>Northwestern-Kellogg and HEC Montréal, Nicola Persico and Decio Coviello (Feb 2022 - Jun 2024)</li>
+                                        <li>Fondo Repubblica Digitale, Evaluation Lab (Nov 2022 - Oct 2023)</li>                        
+                                    </ul>
+                                </summary>
+                            </details>
+                        </div>
+                        </div>
+                    <div class="custom-box" style="margin-bottom: 20px;">
+                        <div class="paper-container">
+                            <details>
+                                <summary style="cursor: pointer; font-size: 16px; margin-bottom: 5px;">
+                                    <span style="font-size: 16px; color: #0066cc;">&#128221;</span>
+                                    <span class="paper-title" style="color: #1a0dab; font-weight: bold;">Teaching and Grading Assistance    
+                                    </span> 
+                                    </span> 
+                                    <ul>
+                                        <li>Graduate Tutor, Econometrics III, Kellogg MECS (Apr 2026 - Jun 2026)</li>
+                                        <li>Grading Assistant, Business Analytics, Kellogg MBAi (Sep 2025 - Dec 2025)</li>
+                                        <li>Senior TA, Financial Mathematics, University of Catania (Nov 2022 - Feb 2023)</li>
+                                        <li>Junior TA, General Mathematics, UNiversity of Catania (Feb 2021 - Sep 2022)</li>
+                                    </ul>
+                                </summary>
+                            </details>
+                        </div>
+                        </div>
+                    <div class="custom-box" style="margin-bottom: 20px;">
+                        <div class="paper-container">
+                            <details>
+                                <summary style="cursor: pointer; font-size: 16px; margin-bottom: 0px;">
+                                    <span style="font-size: 16px; color: #0066cc;">&#x1F4DA;</span>
+                                    <span class="paper-title" style="color: #1a0dab; font-weight: bold;">Other qualifications    
+                                    </span> 
+                                    </span> 
+                                    <ul>
+                                        <li>Maths: General Topology, Department of Mathematics (U. of Catania, June 2023), 30/30</li>
+                                        <li>Programming: Stata, R, Julia, LaTeX, MATLAB, Vim, Git, C++, JS, Mathematica.</li>
+                                        <li>Languages: Italian (native), English (fluent), French (ambitious beginner) </li>
+                                        <li>Music: Guitar (main), keys and bass (side), actively looking for a band in the Chicago area </li>
+                                        <li>Journalism: Former president and author of Starting Finance Club, University of Catania</li>
+                                    </ul>
+                                </summary>
+                            </details>
+                        </div>
+                        </div>
+            </div> </div> <script src="code.js"></script>
     </body>
 </html>

@@ -1,60 +1,172 @@
+<!DOCTYPE html>
 <html>
     <head>
-    <meta charset = "UTF-8" />
-    <title>Diego Ciccia</title>
-    <link rel="stylesheet" href="life.css"> 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="website.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+        <meta charset="UTF-8" />
+        <title>Diego Ciccia</title>
+        <link rel="stylesheet" href="life.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="website.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+        
+        <style>
+            /* Custom utility style to guarantee perfect alignment and matching borders */
+            .custom-box {
+                background-color: #ffffff; 
+                border: 3px solid #000000; 
+                padding: 20px; 
+                margin-bottom: 20px;
+                height: 100%; /* Ensures boxes look uniform */
+            }
+            .img-border {
+                border: 3px solid #000000;
+                margin-bottom: 20px;
+            }
+        </style>
     </head>
 
     <body>
-    <nav class="navbar navbar-inverse">
-        <div class="container">
-            <ul class="nav navbar-nav">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <ul class="nav navbar-nav">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="experience.html">Experience</a></li> 
+                <li><a href="experience.html">CV</a></li> 
                 <li><a style="color:#e01709" href="/">Software</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div id = "fcontainer" style = "margin: 0 auto;">
-
-    <div id ="conway">
-    </div>
-
-    <div class="container">
-            <div class="col-md-8 center" style ="background-color: #ffffff;border-style: solid;opacity: 0.95;">
-                    <a style="color:#000000"><b>Statistical Packages</b></a>
-                    <ul>
-                        <li><a href = "https://github.com/DiegoCiccia/sdid/tree/main/sdid_event">sdid_event</a>, a Stata module to implement event study analysis with sdid.</li>
-                        <li><a style="color:#000000"><b>Packages from the did_multiplegt family I currently update</b></a>
-                            <ul>
-                                <li><a href = "https://github.com/chaisemartinPackages/did_multiplegt_dyn">did_multiplegt_dyn</a>, estimation of event-study Difference-in-Difference (DID) estimators in designs with multiple groups and periods, and with a potentially non-binary treatment that may increase or decrease multiple times.</li>
-                                <li><a href = "https://github.com/chaisemartinPackages/stute_test">stute_test</a>, a non-parametric test, originally proposed by Stute (1997), that the expectation of a dependent variable Y given an independent variable D is linear in D.</li>
-                                <li><a href = "https://github.com/chaisemartinPackages/yatchew_test">yatchew_test</a>, a non-parametric test of linearity originally proposed by Yatchew (1997) and improved by de Chaisemartin & D'Haultfoeuille (2024) to be robust under heteroskedasticity. </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <a style="color:#000000"><b>Stata Utilities</b></a>
-                    <ul>
-                        <li><a href = "https://github.com/DiegoCiccia/ecollapse">ecollapse</a>, extended Stata collapse function with support for string concatenation and union.</li>
-                        <li><a href ="https://github.com/DiegoCiccia/StataPostProduce">StataPostProduce</a>, a Stata package that translates gr_edit commands into user-friendly codes, a.k.a. the One Piece of Stata Programming.</li>
-                        <li><a href = "https://github.com/DiegoCiccia/runview">runview</a>, a simple plugin to preview Stata help files from VSCode.</li>
-                        <li><a href = "https://github.com/DiegoCiccia/lcollapse">lcollapse</a>, Stata collapse function, but it keeps the labels.</li>
-                    </ul>                
-                    <a style="color:#000000"><b>R Utilities</b></a>
-                    <ul>
-                        <li><a href = "https://github.com/DiegoCiccia/rnames">rnames</a>, recursive display of items in R nested lists.</li>
-                    </ul>
-                    Lots of other programming shenanigans on my <a href = "https://github.com/DiegoCiccia">Github page</a>.
-                </div>
+                <li><a href="conway.html">Game of Life</a></li> 
+                </ul>
             </div>
-    </div>
-    <script src="code.js"></script>
+        </nav>
+
+        <div id="fcontainer">
+            <div id="conway"></div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="custom-box" style="margin-bottom: 20px;">
+                        <div style="font-family:'Oswald',sans-serif; font-size: 24px;">
+                            <a style="color:#595d61; text-decoration: none;"><b>ERC REALLY CREDIBLE</b></a>
+                        <a href="https://github.com/Credible-Answers">[Github]</a>
+                        <a href="https://sites.google.com/site/clementdechaisemartin/home/erc-really-credible-team?authuser=0">[Team]</a>
+                        </div>
+                    <div class="table-container">
+                            <table class="software-table">
+                                <thead>
+                                <tr>
+                                    <th>Stata (SSC)</th>
+                                    <th>R (CRAN)</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="code-syntax"><code>did_multiplegt_dyn</code></td>
+                                    <td class="code-syntax"><code>DIDmultiplegtDYN</code></td>
+                                    <td>Estimation of heterogeneity-robust difference-in-differences estimators, with a binary, discrete, or continuous treatment, in designs where past treatments may affect the current outcome</td>
+                                </tr>
+                                <tr>
+                                    <td class="code-syntax"><code>did_had</code></td>
+                                    <td class="code-syntax"><code>DIDHAD</code></td>
+                                    <td>
+                                        Estimation of the effect of a treatment on an outcome in a heterogeneous adoption design with no stayers but some quasi stayers (de Chaisemartin et al., 2025).
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="code-syntax"><code>twowayfeweights</code></td>
+                                    <td class="code-syntax"><code>TwoWayFEWeights</code></td>
+                                    <td>
+                                        Computes the implicit weights attached to two-way fixed effects regressions, as well as summary measures of these regressions' robustness to heterogeneous treatment effects. Based on de Chaisemartin and D'Haultfoeuille (2020).
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="code-syntax"><code>stute_test</code></td>
+                                    <td class="code-syntax"><code>StuteTest</code></td>
+                                    <td>
+                                        Non-parametric test, originally proposed by Stute (1997), that the expectation of a dependent variable Y given an independent variable D is linear in D.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="code-syntax"><code>yatchew_test</code></td>
+                                    <td class="code-syntax"><code>YatchewTest</code></td>
+                                    <td>
+                                        Test of linearity originally proposed by Yatchew (1997) and improved by de Chaisemartin et al. (2025) to be robust under heteroskedasticity.
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                    </div>
+
+                    <div class="custom-box" style="margin-bottom: 20px;">
+                        <div style="font-family:'Oswald',sans-serif; font-size: 24px;">
+                            <a style="color:#595d61; text-decoration: none;"><b>Synthetic Difference-in-Differences</b></a>
+                        <a href="https://github.com/Daniel-Pailanir/sdid">[Github]</a>
+                        </div>
+                    <div class="table-container">
+                    <table class="software-table">
+                        <thead>
+                        <tr>
+                            <th>Stata (SSC)</th>
+                            <th>R (CRAN)</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="code-syntax"><code>sdid</code></td>
+                            <td class="code-syntax"></td>
+                            <td>
+                                Synthetic difference-in-differences (Arkhangelsky et al., 2021) estimation, inference, and visualization
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="code-syntax"><code>sdid_event</code></td>
+                            <td class="code-syntax"></td>
+                            <td>
+                                Synthetic Difference-in-Differences (SDID) event-study estimators
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    </div>
+                    <div class="custom-box" style="margin-bottom: 20px;">
+                        <div style="font-family:'Oswald',sans-serif; font-size: 24px;">
+                            <a style="color:#595d61; text-decoration: none;"><b>Utilities</b></a>
+                        <a href="https://github.com/DiegoCiccia?tab=repositories">[Other shenanigans on my Github page]</a>
+                        </div>
+                    <div class="table-container">
+                    <table class="software-table">
+                        <thead>
+                        <tr>
+                            <th>Stata (SSC)</th>
+                            <th>R (CRAN)</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="code-syntax"><code>ecollapse</code></td>
+                            <td class="code-syntax"></td>
+                            <td>
+                                Stata module to extend collapse to string variables and keep labels while collapsing.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="code-syntax"></td>
+                            <td class="code-syntax"><code>rnames</code></td>
+                            <td>
+                                Recursive display of names and paths of all the items nested within sublists of a list object.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div> 
+
+            </div> </div> <script src="code.js"></script>
     </body>
 </html>
