@@ -1,87 +1,286 @@
+<!DOCTYPE html>
 <html>
     <head>
-    <meta charset = "UTF-8" />
-    <title>Diego Ciccia</title>
-    <link rel="stylesheet" href="life.css"> 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="website.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+        <meta charset="UTF-8" />
+        <title>Diego Ciccia</title>
+        <link rel="stylesheet" href="life.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="website.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+        
+        <style>
+            /* Custom utility style to guarantee perfect alignment and matching borders */
+            .custom-box {
+                background-color: #ffffff; 
+                border: 3px solid #000000; 
+                padding: 20px; 
+                margin-bottom: 20px;
+                height: 100%; /* Ensures boxes look uniform */
+            }
+            .img-border {
+                border: 3px solid #000000;
+                margin-bottom: 20px;
+            }
+        </style>
     </head>
 
     <body>
-    <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li><a style="color:#e01709" href="/">Home</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="publications.html">Software</a></li> 
+                </ul>
+            </div>
+        </nav>
+
+        <div id="fcontainer">
+            <div id="conway"></div>
+        </div>
+
         <div class="container">
-            <ul class="nav navbar-nav">
-                <li><a style="color:#e01709" href="/">Home</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="publications.html">Software</a></li> 
-            </ul>
-        </div>
-    </nav>
-
-    <div id = "fcontainer">
-    <div id ="conway">
-    </div>
-
-    <div class="container">
-    <div class="row" style = "justify-content: center; align-items: center;">
-        <div class="col-md-2" style="height: auto; width : auto;">
-            <img class="img-responsive" src="assets/GitHubProPic.jpg" alt="" width = "300"><br>
-        </div> 
-
-        <div class="col-md-6" style ="background-color: #ffffff;border-style: solid;opacity: 0.9;">
-            <div style="font-family:'Oswald',sans-serif; font-size: 32px;">
-                <a style="color:#595d61;" href="index.html"><b>Diego Ciccia</b></a>
-            </div>
-            <br>
-            <a style="color:#333;" href="mailto:diego.ciccia@kellogg.northwestern.edu" target="_blank"><img src="icons/mail.png" width="30" height="30"></a>
-            &nbsp;
-            <a style="color:#333;" href="https://x.com/diegociccia1" target="_blank"><img src="icons/twitter.png" width="30" height="30"></a>
-            &nbsp;
-            <a style="color:#333;" href="https://www.linkedin.com/in/diego-ciccia-1253381b6/" target="_blank"><img src="icons/1024px-LinkedIn_logo_In-Black.png" width="30" height="30"></a>
-            &nbsp;
-            <a style="color:#333;" href="https://econpapers.repec.org/RAS/pci203.htm" target="_blank"><img src="icons/ep.png" width="30" height="30"></a>
-            &nbsp;
-            <a style="color:#333;" href="https://scholar.google.com/citations?user=Vs7YD_kAAAAJ&hl=it&oi=ao" target="_blank"><img src="icons/gscholar.png" width="30" height="30"></a>
-            &nbsp;
-            <a style="color:#333;" href="https://github.com/DiegoCiccia" target="_blank"><img src="icons/GitHub-Mark-32px.png" width="30" height="30"></a>
-
-            <div>
-                <div style="margin-top:3%; text-align:left;"> 
-                    <p>
-                    <br><b>Short bio</b><br>
-                    <ul>
-                        <li>Ph.D. Student in Managerial Economics and Strategy, Northwestern-Kellogg.</li>
-                        <li>Research interests: Econometrics, Applied Economics.</li>
-                        <li>Maintainer of de Chaisemartin and D'Haultfoeuille R packages.</li>
-                        <li>General purpose developer in Stata.</li>
-                        <li>Open source enthusiast, guitarist and would-be meme historian.</li>
-                    </ul>
-                    </p>
-                </div>
-            </div>  
-
-            <div>
-                <div style="margin-top:3%; text-align:left;"> 
-                    <p>
-                    <br><b>News</b><br>
-                    <ul>
-                        <li> <a href="https://arxiv.org/abs/2407.09565">A Short Note on Event-Study Synthetic Difference-in-Differences Estimators</a> (with Stata package)
-                    </ul>
-                    </p>
-                </div>
-            </div>  
-
-            <div>
-                Background: <i>Interactive Conway's Game of Life in Javascript</i>, Robert Spatz
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-responsive img-border" src="assets/GitHubProPic.jpg" alt="Diego Ciccia" style="width: 100%; max-width: 300px; margin-left: auto; margin-right: auto;">
+                </div> 
+                <div class="col-md-9">
+                    <div class="custom-box">
+                        <div style="font-family:'Oswald',sans-serif; font-size: 48px;">
+                            <a style="color:#595d61; text-decoration: none;" href="index.html"><b>Diego Ciccia</b></a>
                 <br>
-            </div>
-        </div>
-    </div>
-    </div>
-    <script src="code.js"></script>
+                        <a style="color:#333;" href="mailto:diego.ciccia@kellogg.northwestern.edu" target="_blank"><img src="icons/mail.png" width="30" height="30"></a>
+                        <a style="color:#333;" href="https://x.com/diegociccia1" target="_blank"><img src="icons/twitter.png" width="30" height="30"></a>
+                        <a style="color:#333;" href="https://www.linkedin.com/in/diego-ciccia-1253381b6/" target="_blank"><img src="icons/1024px-LinkedIn_logo_In-Black.png" width="30" height="30"></a>
+                        <a style="color:#333;" href="https://econpapers.repec.org/RAS/pci203.htm" target="_blank"><img src="icons/ep.png" width="30" height="30"></a>
+                        <a style="color:#333;" href="https://scholar.google.com/citations?user=Vs7YD_kAAAAJ&hl=it&oi=ao" target="_blank"><img src="icons/gscholar.png" width="30" height="30"></a>
+                        <a style="color:#333;" href="https://github.com/DiegoCiccia" target="_blank"><img src="icons/GitHub-Mark-32px.png" width="30" height="30"></a>
+
+                        </div>
+                        <div style="margin-top: 15px; font-size: 15px;"> 
+                            <ul style="margin-top: 10px; padding-left: 20px; font-size: 16px">
+                                <li>Ph.D. Student in Managerial Economics and Strategy, Northwestern-Kellogg (2nd year)</li>
+                                <li>Research interests: Econometrics, Applied Economics</li>
+                                <li>Developer in Stata and R</li>
+                                <li>Open source enthusiast, guitarist and would-be meme historian</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 15px; font-size: 13px; color: #777;"> 
+                            Background: <i>Interactive Conway's Game of Life in Javascript</i>, Robert Spatz
+                        </div>
+                    </div>  
+                </div>
+            </div> <div class="row">
+                <div class="col-md-12">
+                    <div class="custom-box" style="margin-bottom: 40px;">
+                        <div style="font-family:'Oswald',sans-serif; font-size: 32px; margin-bottom: 15px;">
+                            <a style="color:#595d61; text-decoration: none;"><b>Research</b></a>
+                        </div>
+                        
+                        <div style="font-family:'Oswald',sans-serif; font-size: 24px; margin-bottom: 10px;">
+                            <a style="color:#595d61; text-decoration: none;"><b>Econometrics</b></a>
+                        </div>
+
+                        <div style="font-family:'Oswald',sans-serif; font-size: 18px; margin-bottom: 10px;">
+                            <a style="color:#595d61; text-decoration: none;"><b>Working papers:</b></a>
+                        </div>
+
+                        <div class="paper-container">
+                            <details>
+                                <summary style="cursor: pointer; font-size: 16px; margin-bottom: 5px;">
+                                    <span style="font-size: 16px; color: #0066cc;">&#128251;</span>
+                                    <span class="paper-title" style="color: #1a0dab; font-weight: bold;">Difference-in-Differences Estimators When No Unit Remains Untreated     
+                                    </span> 
+                                    </span> 
+                                    <span class="abstract-click-zone">
+                                        <span class="abstract-toggle" style="color: #666;">[Abstract]</span>
+                                    </span>
+                                    <span class="arxiv-link-zone">
+                                        <a href="https://arxiv.org/abs/2405.04465" target="_blank" class="arxiv-toggle" style="color: #B31B1B;">[ArXiv]</a>
+                                    </span>
+                                    <div class="paper-authors">&ensp;&emsp;&nbsp;with Clément de Chaisemartin, Xavier D'Haultfoeuille and Felix Knau</div>
+                                </summary>
+                                <div class="abstract-content" style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #000000; margin-top: 10px;">
+                                    <p><strong>Abstract:</strong> 
+                                        We consider treatment-effect estimation with a two-periods panel, where units are untreated at period one, and receive strictly positive doses at period two. First, we consider designs with some quasi-untreated units, with a period-two dose local to zero. We show that under a parallel-trends assumption, a weighted average of slopes of units' potential outcomes is identified by a difference-in-difference estimand using quasi-untreated units as the control group. We leverage results from the regression-discontinuity-design literature to propose a nonparametric estimator. Then, we propose estimators for designs without quasi-untreated units. Finally, we propose a test of the homogeneous-effect assumption underlying two-way-fixed-effects regressions.
+                                    </p>
+                                </div>
+                            </details>
+                        </div>
+
+                        <br>
+                        <div style="font-family:'Oswald',sans-serif; font-size: 18px; margin-bottom: 10px;">
+                            <a style="color:#595d61; text-decoration: none;"><b>Work in progress:</b></a>
+                        </div>
+
+
+
+
+                        <div class="paper-container">
+                            <details>
+                                <summary style="cursor: pointer; font-size: 16px; margin-bottom: 5px;">
+                                    <span style="font-size: 16px; color: #0066cc;">&#129513;</span>
+                                    <span class="paper-title" style="color: #1a0dab; font-weight: bold;">Bounds on Treatment Effect Heterogeneity via Semidefinite Matrix Completion</span> 
+                                    <span class="abstract-click-zone">
+                                        <span class="abstract-toggle" style="color: #666;">[Abstract]</span>
+                                    </span>
+                                </summary>
+                                <div class="abstract-content" style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #000000; margin-top: 10px;">
+                                    <p><strong>Abstract:</strong> The distribution of treatment effects is a relevant, yet generally unknown, parameter for impact evaluation and policy choice. Randomized experiments reveal the average treatment effect, but not the dispersion of treatment effects around the mean. In this paper, I propose bounds on the variance of the treatment effect based on the semidefinite completion of the correlation matrix of potential outcomes and baseline covariates. I prove properties of the identified set, consistency of the set estimator and asymptotic validity of the corresponding confidence interval. Compared to only using the marginal distributions of potential outcomes, baseline covariates considerably refine the identified set. Nonetheless, inference may be adversely affected by covariates that are irrelevant in some well-defined sense. I revisit Cueva et al. (2024), who use Fréchet-Hoeffding inequalities to bound the variance of treatment effect, and find that confidence intervals based on the proposed bounds are generally tighter.</p></div>
+                            </details>
+                        </div>
+
+
+
+
+                        <div class="paper-container">
+                            <details>
+                                <summary style="cursor: pointer; font-size: 16px; margin-bottom: 5px;">
+                                    <span style="font-size: 16px; color: #0066cc;">&#x2696;</span>
+                                    <span class="paper-title" style="color: #1a0dab; font-weight: bold;">
+                                        &nbsp;Sharp Bounds on Judge IV Estimands when Matched Judge-Defendant Data is not Available
+                                    </span> 
+                                    </span> 
+                                    <span class="abstract-click-zone">
+                                        <span class="abstract-toggle" style="color: #666;">[Abstract]</span>
+                                    </span>
+                                </summary>
+                                <div class="abstract-content" style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #000000; margin-top: 10px;">
+                                    <p><strong>Abstract:</strong> 
+                                        Most research on the effects of incarceration on post-conviction outcomes uses records from
+                                        criminal proceedings of a particular court to implement a judge IV design. This specification is
+                                        feasible due to the joint availability of defendant and judge identifiers. Contrary to the provision
+                                        of law, court records are often difficult to obtain. Publicly available data exists together with
+                                        restricted court records. Nonetheless, the former often lacks either judge or defendant identifiers.
+                                        This makes a canonical judge IV design infeasible, in that judge assignment is not posted in
+                                        the same dataset as the defendant-level outcome. In this note, I explore the extent to which
+                                        incomplete public data is a substitute of court records, when the latter is not available. I
+                                        recast this instance as a data combination problem within a judge IV design. In particular, I
+                                        propose sharp bounds on the IV estimand when the instrument and the outcome are not jointly
+                                        observed. I show that exogeneity of judge assignment implies that the sign of the coefficient
+                                        is not identified. Conversely, estimated bounds can significantly refine the range of feasible
+                                        magnitudes. I document this property using data from Green and Winik (2010). I conclude by
+                                        discussing practical recommendations and future steps.
+                                    </p>
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="paper-container">
+                            <details>
+                                <summary style="cursor: pointer; font-size: 16px; margin-bottom: 5px;">
+                                    <span style="font-size: 16px; color: #0066cc;">&#129670;</span>
+                                    <span class="paper-title" style="color: #1a0dab; font-weight: bold;">A Short Note on Event-Study Synthetic Difference-in-Differences Estimators
+                                    </span> 
+                                    </span> 
+                                    <span class="abstract-click-zone">
+                                        <span class="abstract-toggle" style="color: #666;">[Abstract]</span>
+                                    </span>
+                                    <span class="arxiv-link-zone">
+                                        <a href="https://arxiv.org/abs/2407.09565" target="_blank" class="arxiv-toggle" style="color: #B31B1B;">[ArXiv]</a>
+                                    </span>
+                                </summary>
+                                <div class="abstract-content" style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #000000; margin-top: 10px;">
+                                    <p><strong>Abstract:</strong> 
+                                        I propose an event study extension of Synthetic Difference-in-Differences (SDID) estimators. I show that, in simple and staggered adoption designs, estimators from Arkhangelsky et al. (2021) can be disaggregated into dynamic treatment effect estimators, comparing the lagged outcome differentials of treated and synthetic controls to their pre-treatment average. Estimators presented in this note can be computed using the sdid_event Stata package.
+                                    </p>
+                                </div>
+                            </details>
+                        </div>
+
+                        <br>
+                        <div style="font-family:'Oswald',sans-serif; font-size: 18px; margin-bottom: 10px;">
+                            <a style="color:#595d61; text-decoration: none;"><b>Guides:</b></a>
+                        </div>
+
+                        <div class="paper-container">
+                            <details>
+                                <summary style="cursor: pointer; font-size: 16px; margin-bottom: 5px;">
+                                    <span style="font-size: 16px; color: #0066cc;">&#x1F4C8;</span>
+                                    <span class="paper-title" style="color: #1a0dab; font-weight: bold;">
+                                        Using did_multiplegt_dyn to Estimate Event-Study Effects in Complex Designs
+                                    </span> 
+                                    </span> 
+                                    <span class="abstract-click-zone">
+                                        <span class="abstract-toggle" style="color: #666;">[Abstract]</span>
+                                    </span>
+                                    <span class="ssrn-link-zone">
+                                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5337463" target="_blank" class="ssrn-toggle">[SSRN]</a>
+                                    </span>
+                                    <div class="paper-authors">&ensp;&emsp;&nbsp;with Clément de Chaisemartin, Felix Knau, Mélitine Malézieux, Doulo Sow, David Arboleda, Romain Angotti, Xavier D'Haultfoeuille, Bingxue Li, Henri Fabre, Anzony Quispe</div>
+                                </summary>
+                                <div class="abstract-content" style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #000000; margin-top: 10px;">
+                                    <p><strong>Abstract:</strong> 
+                                        The command did_multiplegt_dyn can be used to estimate event-study effects in complex designs with a potentially non-binary and/or non-absorbing treatment. This paper starts by providing an overview of the estimators computed by the command. Then, simulations based on three real datasets are used to demonstrate the estimators' properties. Finally, the command is used on four real datasets to estimate event-study effects in complex designs. The first example has a binary treatment that can turn on an off. The second example has a continuous absorbing treatment. The third example has a discrete multivalued treatment that can increase or decrease multiple times over time. The fourth example has two, binary and absorbing treatments, where the second treatment always happens after the first.
+                                    </p>
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="paper-container">
+                            <details>
+                                <summary style="cursor: pointer; font-size: 16px; margin-bottom: 5px;">
+                                    <span style="font-size: 16px; color: #0066cc;">&#129514;</span>
+                                    <span class="paper-title" style="color: #1a0dab; font-weight: bold;">
+                                        A Practitioners Guide to Synthetic Difference-in-Differences
+                                    </span> 
+                                    </span> 
+                                    <div class="paper-authors">&ensp;&emsp;&nbsp;with 
+                                        Damian Clarke and Justin Waddy
+                                    </div>
+                                </summary>
+                            </details>
+                        </div>
+
+                        <br>
+                        <div style="font-family:'Oswald',sans-serif; font-size: 24px; margin-bottom: 10px;">
+                            <a style="color:#595d61; text-decoration: none;"><b>Applied economics</b></a>
+                        </div>
+
+                        <div style="font-family:'Oswald',sans-serif; font-size: 16px; margin-bottom: 10px;">
+                            <a style="color:#595d61; text-decoration: none;"><b>Work in progress:</b></a>
+                        </div>
+
+                        <div class="paper-container">
+                            <details>
+                                <summary style="cursor: pointer; font-size: 16px; margin-bottom: 5px;">
+                                    <span style="font-size: 16px; color: #0066cc;">&#x1F465;</span>
+                                    <span class="paper-title" style="color: #1a0dab; font-weight: bold;">
+                                        Municipalities Under Siege: Organized Crime Infiltration and the Misuse of Public Resources
+                                    </span> 
+                                    </span> 
+                                    <div class="paper-authors">&ensp;&emsp;&nbsp;with 
+                                        Francesca Calamunci, Francesco Drago, and Roberto Galbiati
+                                    </div>
+                                </summary>
+                            </details>
+                        </div>
+
+                        <div class="paper-container">
+                            <details>
+                                <summary style="cursor: pointer; font-size: 16px; margin-bottom: 5px;">
+                                    <span style="font-size: 16px; color: #0066cc;">&#127819;</span>
+                                    <span class="paper-title" style="color: #1a0dab; font-weight: bold;">
+                                        Organized Crime Frictions in Agriculture: Evidence from the Dissolution of Sicilian Municipalities
+                                    </span> 
+                                    </span> 
+                                    <div class="paper-authors">&ensp;&emsp;&nbsp;with 
+                                        Roberto Vacante
+                                    </div>
+                                </summary>
+                            </details>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div> </div> <script src="code.js"></script>
     </body>
 </html>

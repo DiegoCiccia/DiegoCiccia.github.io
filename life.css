@@ -51,6 +51,105 @@ td.dead {
 }
 
 td.live {
-    background-color: #858282;
+    background-color: #040120;
     border-radius: 10px;
+}
+
+/* Make the summary wrapper ignore clicks globally */
+details summary {
+  list-style: none;
+  pointer-events: none; 
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Title text */
+.paper-title {
+  color: #333333; 
+  font-weight: bold;
+}
+
+/* Abstract Click Zone (Toggles details) */
+.abstract-click-zone {
+  pointer-events: auto; /* Restores click tracking */
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 2px 0 5px;
+}
+
+.abstract-toggle {
+  color: #1a0dab; /* Classic link blue */
+}
+
+.abstract-click-zone:hover .abstract-toggle {
+  text-decoration: underline;
+}
+
+/* arXiv Link Zone (Bypasses details, acts as external link) */
+.arxiv-link-zone {
+  pointer-events: auto; /* Restores click tracking */
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.arxiv-toggle {
+  color: #B31B1B; /* Official arXiv Maroon */
+  text-decoration: none;
+}
+
+.arxiv-toggle:hover {
+  text-decoration: underline;
+  color: #B31B1B; /* Keeps color cohesive on hover */
+}
+.ssrn-link-zone {
+  pointer-events: auto; /* Restores click tracking */
+  display: inline-block;
+}
+
+.ssrn-toggle {
+  color: #002147; /* Official SSRN Corporate Dark Navy Blue */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.ssrn-toggle:hover {
+  text-decoration: underline;
+  color: #002147;
+}
+
+/* Abstract Content Drawer */
+.abstract-content {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-left: 4px solid #000000;
+  margin-top: 10px;
+  margin-left: 24px; /* Perfectly scales to the indentation margin */
+  pointer-events: auto;
+}
+
+/* Abstract Content Drawer */
+.abstract-content {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-left: 4px solid #000000;
+  margin-top: 10px;
+  pointer-events: auto; /* Lets users highlight or copy text inside */
+}
+
+.paper-authors {
+  color: #555555;
+  font-style: italic;
+  margin-top: 2px;
+  font-size: 14px;
+}
+
+.paper-icon {
+  font-size: 14px;
+  line-height: 1;
+  display: inline-block;
+  min-width: 18px; /* Guarantees an empty slot still reserves horizontal space */
 }
