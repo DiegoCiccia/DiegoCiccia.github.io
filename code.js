@@ -8,7 +8,7 @@ var playing = true;
 var grid = new Array(rows);
 var nextGrid = new Array(rows);
 var timer;
-var reproductionTime = 100;
+var reproductionTime = 200;
 
 function initializeGrids() {
     for (var i = 0; i < rows; i++) {
