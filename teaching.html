@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Diego Ciccia</title>
+        <link rel="stylesheet" href="life.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="website.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+        
+        <style>
+            /* Custom utility style to guarantee perfect alignment and matching borders */
+            .custom-box {
+                background-color: #ffffff; 
+                border: 3px solid #000000; 
+                padding: 20px; 
+                margin-bottom: 20px;
+                height: 100%; /* Ensures boxes look uniform */
+            }
+            .img-border {
+                border: 3px solid #000000;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="experience.html">CV</a></li> 
+                <li><a style="color:#e01709" href="/">Teaching</a></li>
+                <li><a href="publications.html">Software</a></li> 
+                <li><a href="conway.html">Game of Life</a></li> 
+                </ul>
+            </div>
+        </nav>
+        <div id="fcontainer">
+            <div id="conway"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="custom-box" style="margin-bottom: 20px;">
+                        <div class="paper-container">
+                            <details>
+                                <summary style="cursor: pointer; font-size: 16px; margin-bottom: 0px;">
+                                <div style="font-family:'Oswald',sans-serif; font-size: 24px;">
+                                    <a style="color:#595d61; text-decoration: none;"><b>Synthetic Difference-in-Differences</b></a>
+                                </div>
+                                <div>
+                                    Slides from a minicourse on SDID I taught at Collegio Carlo Alberto (Turin) in June 2026 to the Evaluation Lab team (Fondo Repubblica Digitale)
+                                </div>
+                                <br>
+                                        <ol>
+                                            <li>
+                                                <span class="arxiv-link-zone">
+                                                    <a href="assets/main_training_1.pdf" target="_blank" class="arxiv-toggle" style="color: #B31B1B;">[pdf]</a>
+                                                </span><b>Intro to Differences-in-Differences and Synthetic Control</b>: potential outcome framework with panel data, latent factor model, DID and SC 
+                                            </li>
+                                            <li>
+                                                <span class="arxiv-link-zone">
+                                                    <a href="assets/main_training_2.pdf" target="_blank" class="arxiv-toggle" style="color: #B31B1B;">[pdf]</a>
+                                                </span><b>Synthetic Differences-in-Differences</b>: SDID estimator, double-robustness, staggered designs, event study decomposition
+                                            </li>
+                                            <li>
+                                                <span class="arxiv-link-zone">
+                                                    <a href="assets/main_training_3.pdf" target="_blank" class="arxiv-toggle" style="color: #B31B1B;">[pdf]</a>
+                                                </span><b>More on Synthetic Differences-in-Differences</b>:  inference, covariate adjustment, placebo testing
+                                            </li>
+                                        </ol>
+                                </summary>
+                            </details>
+                        </div>
+                        </div>
+
+
+
+            </div> </div> <script src="code.js"></script>
+    </body>
+</html>
